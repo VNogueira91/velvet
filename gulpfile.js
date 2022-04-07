@@ -74,4 +74,4 @@ function test(){
         .pipe(dest(testPath +'temp-build'))
 }
 
-exports.default = test
+exports.default = createSingleTypescriptFile
