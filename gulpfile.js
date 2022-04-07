@@ -7,7 +7,7 @@ const concat = require('gulp-concat');
 const {argParser} = require('@glass-project/dsu-utils/src/utils.js');
 
 
-const pathAdaptor = '../../../../'
+const pathAdaptor = '../../../'
 const testPath = 'test/';
 
 // let {name, version} = require(pathAdaptor + 'package.json');
