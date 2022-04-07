@@ -4,31 +4,26 @@
   "description": "Small library to handle bundles",
   "main": "",
   "module": "",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/VNogueira91/velvet.git"
   },
-
   "engines": {
     "node": ">=16.0.0",
     "npm": ">=8.0.0"
   },
-
   "keywords": [
     "typescript",
     "bundles"
   ],
-  
   "bugs": {
     "url": "https://github.com/VNogueira91/velvet/issues"
   },
-  "homepage": "https://github.com/VNogueira91/velvet#readme"
+  "homepage": "https://github.com/VNogueira91/velvet#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
-
-
-
