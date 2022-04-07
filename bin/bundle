@@ -1,0 +1,10 @@
+#!/bin/env node
+
+require = require('esm')(module /*, options*/);
+
+const args = process.argv;
+
+args.shift();
+args.shift();
+
+require('../src/cli').cli(args);

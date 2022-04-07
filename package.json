@@ -1,11 +1,18 @@
 {
-  "name": "velvet",
+  "name": "@glass-project/velvet",
   "version": "0.0.1",
   "description": "Small library to handle bundles",
   "main": "",
   "module": "",
+  "bin": {
+    "@glass-project/velvet":"bin/bundle",
+    "velvet": "bin/bundle"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": ""
   },
   "repository": {
     "type": "git",
@@ -17,13 +24,15 @@
   },
   "keywords": [
     "typescript",
-    "bundles"
+    "bundles",
+    "cli"
   ],
   "bugs": {
     "url": "https://github.com/VNogueira91/velvet/issues"
   },
   "homepage": "https://github.com/VNogueira91/velvet#readme",
   "devDependencies": {
+    "esm": "^3.2.25",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1"
   }
