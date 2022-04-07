@@ -6,7 +6,14 @@ const concat = require('gulp-concat');
 //Glass Project related imports
 const {argParser} = require('@glass-project/dsu-utils/src/utils.js');
 
+
 const pathAdaptor = '../../../../'
+const testPath = 'test/';
+
+// let {name, version} = require(pathAdaptor + 'package.json');
+
+// if (name.indexOf(glassPrefix) !== -1)
+//     name = name.substr(glassPrefix.length).replaceAll("-", "_");
 
 const STAGES = {
     BUILD: "build",
@@ -18,6 +25,29 @@ const MODES = {
     PRODUCTION: "production"
 }
 
+const defaultOptions = {
+    mode: MODES.DEVELOPMENT,
+    stage: STAGES.BUILD,
+    // name: name
+}
+
+const config = argParser(defaultOptions, process.argv)
+
+function isDev(){
+    return config.mode === MODES.DEVELOPMENT;
+}
+
+function isProd(){
+    return config.mode === MODES.PRODUCTION;
+}
+
+function isBuild(){
+    return config.stage === STAGES.BUILD;
+}
+
+function isDeploy(){
+    return config.stage === STAGES.DEPLOY;
+}
 
 //Gets all Typescript Files and concatonates them
 function createSingleTypescriptFile(){
@@ -41,7 +71,7 @@ function controlFlow(){
 
 function test(){
     return src('src/cli.js')
-        .pipe(dest('temp-build'))
+        .pipe(dest(testPath +'temp-build'))
 }
 
 exports.default = test
