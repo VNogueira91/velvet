@@ -52,6 +52,7 @@ function isDeploy(){
 //Gets all Typescript Files and concatonates them
 function createSingleTypescriptFile(){
     const typescriptFiles = [pathAdaptor + 'src/**/*.ts'];
+    console.log(typescriptFiles)
 
     //get files
     //concat files
