@@ -1,6 +1,13 @@
 export function cli(args) {
-    console.log(args)
     const {execSync} = require('child_process')
 
-    execSync("npx gulp")
+    let options = "";
+
+    if(args)
+        args.forEach(element => {
+            options = options + element + " "
+        });
+
+
+    execSync(`npx gulp ${options}`);
 }
