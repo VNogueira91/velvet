@@ -8,6 +8,6 @@ export function cli(args) {
             options = options + element + " "
         });
 
-
+    console.log("running gulp")
     execSync(`npx gulp ${options}`);
 }

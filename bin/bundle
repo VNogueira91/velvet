@@ -7,4 +7,6 @@ const args = process.argv;
 args.shift();
 args.shift();
 
+console.log(args);
+
 require('../src/cli').cli(args);
